@@ -4,3 +4,11 @@ body{
     text-align: center;
     margin-top: 40px;
 }
+
+#caixa{
+    width: 100px;
+    height: 100px;
+    background: #790000;
+    margin: 30px auto;
+    transition: transform 0.5s, background 0.5s;
+}
