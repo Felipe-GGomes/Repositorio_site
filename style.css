@@ -1,14 +1,46 @@
-body{
-    font-family: arial, sans-serif;
-    background: #8a8989;
-    text-align: center;
-    margin-top: 40px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #222;
 }
 
-#caixa{
-    width: 100px;
-    height: 100px;
-    background: #000000;
-    margin: 30px auto;
-    transition: transform 0.5s, background 0.5s;
+header {
+  background: #33455b;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+main {
+  max-width: 600px;
+  background: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px #0002;
+}
+
+footer {
+  background: #eee;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 5px 0;
+}
+
+a {
+  color: #3366cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
