@@ -26,28 +26,31 @@ main {
   height: 3px;
   background: #fff;
   margin: 15px 0;
-  width: 100%; /* opcional para controlar o tamanho */
+  width: 100%;
+  /* opcional para controlar o tamanho */
 }
 
 /* Customizando o bullet da lista */
 ul.topicos {
-  list-style-type: disc;   /* bolinha */
+  list-style-type: disc;
+  /* bolinha */
   color: #ffffff;
   font-size: 1em;
 }
+
 ul.topicos li {
   margin-bottom: 8px;
 }
 
 
-section{
-    max-width: 600px;
-    background: #1a2533;
-    color: #fff;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px #0002;
+section {
+  max-width: 600px;
+  background: #1a2533;
+  color: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px #0002;
 }
 
 footer {
@@ -70,6 +73,46 @@ a {
   color: #3366cc;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
+}
+
+/* Menu lateral */
+.menu-lateral {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  background: #363636;
+  color: #fff;
+  padding-top: 40px;
+  z-index: 10;
+  box-shadow: 2px 0 8px #0001;
+}
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-lateral li {
+  margin-bottom: 30px;
+}
+.menu-lateral a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 1px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.menu-lateral a:hover, .menu-lateral a:focus {
+  background: #000000;
+}
+
+/* Suavidade para rolar até a seção */
+html {
+  scroll-behavior: smooth;
 }
