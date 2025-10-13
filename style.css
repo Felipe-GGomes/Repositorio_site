@@ -164,3 +164,35 @@ button:hover, button:focus {
   transform: scale(1.2) rotate(-10deg);
   transition: transform 0.3s;
 }
+
+.quemsou-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.foto-quemsou {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #0008;
+  border: 3px solid #42aaff;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.foto-quemsou:hover {
+  transform: scale(3.2);
+  z-index: 999;
+  box-shadow: 0 8px 32px #000b;
+}
+
+
+
+.texto-quemsou {
+  flex: 1;
+  min-width: 200px;
+}
+
