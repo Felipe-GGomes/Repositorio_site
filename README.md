@@ -8,13 +8,13 @@ Esse repositório é dedicado ao meu processo de aprendizagem, onde vou montar m
 ## 📚 Anotações rápidas de Git
 
 Alguns comandos que vou usar bastante no processo (para não esquecer):
---------------------------------------------------------------------------
-### git branch nome-da-branch      |# cria uma nova branch               |
-### git checkout nome-da-branch    |# troca para a branch selecionada    |
-### git checkout -b nome-da-branch |# cria e já troca para ela           |
-### git add .                      |# adiciona todas as alterações       |
-### git commit -m "sua mensagem"   |# salva o commit                     |
-### git merge nome-da-branch       |# une as mudanças na branch principal|
+-------------------------------------------------------------------------
+### git branch nome-da-branch      # cria uma nova branch               |
+### git checkout nome-da-branch    # troca para a branch selecionada    |
+### git checkout -b nome-da-branch # cria e já troca para ela           |
+### git add .                      # adiciona todas as alterações       |
+### git commit -m "sua mensagem"   # salva o commit                     |
+### git merge nome-da-branch       # une as mudanças na branch principal|
 
 ---
 
