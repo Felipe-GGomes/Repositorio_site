@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<!-- Linkagem -->
+
 <head>
     <meta charset="UTF-8">
     <title>Sobre Felipe Gabriel Gomes</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="JavaScript" href="script.js">
 </head>
 
+<!-- Corpo -->
+
 <body>
+
+    <!-- Header  -->
     <header>
         <h1>Felipe Gabriel Gomes</h1>
         <p>
             Estudante de ADS na UTFPR| Amante de diferentes tecnologias | Pato Branco - PR
         </p>
     </header>
+
+    <!-- Barra leteral -->
     <nav class="menu-lateral">
         <ul>
             <li><a href="#Sobre">Sobre mim</a></li>
@@ -25,6 +32,7 @@
         </ul>
     </nav>
     <main>
+        <!-- Seções referenciadas na barra lateral -->
         <section id="Sobre">
             <h2>Sobre mim</h2>
             <hr class="linha-branca">
@@ -79,7 +87,17 @@
             <i class="fab fa-js" style="color: #f0db4f;" title="JavaScript"></i>
             </p>
         </section>
+        <section id="Interesses">
+            <h2>Interesses</h2>
+            <hr class="linha-branca">
+            <ul class="topicos">
+                <li>Desenvolvimento Web</li>
+                <li>Inteligência Artificial</li>
+                <li>Banco de Dados</li>
+                <li>Tecnologias Emergentes</li>
+        </section>
     </main>
+    <!-- Footer com linkdin e github -->
     <footer>
         <h3>Contato</h3>
         <ul>
@@ -88,14 +106,6 @@
             <li>GitHub: <a href="https://github.com/Felipe-GGomes" target="_blank">Felipe-GGomes</a></li>
         </ul>
     </footer>
-    <script>
-        // JavaScript para ampliar a foto ao clicar
-        const foto = document.querySelector('.foto-quemsou');
-        foto.addEventListener('click', function () {
-            foto.classList.toggle('ampliada');
-        });
-    </script>
-
 </body>
 
 </html>
