@@ -1,13 +1,7 @@
-const botao = document.getElementById('MeuBotao');
-const caixa = document.getElementById('caixa');
-
-botao.addEventListener('click', () => {
-    //alterna uma animação simples
-    caixa.style.transform = 'scale(1.2) rotate(15deg)';
-    caixa.style.background = '#ffffffff';
-
-    setTimeout(() => {
-        caixa.style.transform = '';
-        caixa.style.background = '#000000ff';
-    }, 800);
+// JavaScript para ampliar a foto ao clicar
+<script>
+const foto = document.querySelector('.foto-quemsou');
+foto.addEventListener('click', function() {
+  foto.classList.toggle('ampliada')
 });
+</script>
