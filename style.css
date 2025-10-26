@@ -187,12 +187,10 @@ button:hover, button:focus {
   transform: scale(3.2);
   z-index: 999;
   box-shadow: 0 8px 32px #000b;
+  filter: drop-shadow(1px 4px 12px rgba(14, 0, 143, 0.533));
 }
-
-
 
 .texto-quemsou {
   flex: 1;
   min-width: 200px;
 }
-
