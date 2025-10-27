@@ -1,14 +1,196 @@
-body{
-    font-family: arial, sans-serif;
-    background: #8a8989;
-    text-align: center;
-    margin-top: 40px;
+/* Corpo da página */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #131313 70%, #232526 100%);
+  color: #e0e0e0;
 }
 
-#caixa{
-    width: 100px;
-    height: 100px;
-    background: #000000;
-    margin: 30px auto;
-    transition: transform 0.5s, background 0.5s;
+/* Cabeçalho */
+header {
+  background: #181a1b;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 10px 0;
+  box-shadow: 0 2px 12px #0004;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 600px;
+  background: #232526;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px #0006;
+}
+
+/* Linha branca decorativa */
+.linha-branca {
+  border: none;
+  height: 3px;
+  background: #42aaff;
+  margin: 18px 0;
+  width: 60%;
+  border-radius: 4px;
+}
+
+/* Lista personalizada de tópicos */
+ul.topicos {
+  list-style-type: disc;
+  color: #f5f5f7;
+  font-size: 1em;
+  margin-left: 24px;
+}
+ul.topicos li {
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+/* Seção do site */
+section {
+  max-width: 600px;
+  background: #1a2533;
+  color: #fafcff;
+  margin: 30px auto;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px #0006;
+}
+
+/* Títulos */
+h2, h3 {
+  background: linear-gradient(90deg, #33455b 60%, #18191a 100%);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+/* Rodapé */
+footer {
+  background: #181a1b;
+  padding: 15px 0;
+  text-align: center;
+  margin-top: 40px;
+  color: #e0e0e0;
+  box-shadow: 0 -2px 12px #0005;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin: 8px 0;
+}
+
+/* Links */
+a {
+  color: #42aaff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #9eebff;
+  text-decoration: underline;
+}
+
+/* Menu lateral fixo */
+.menu-lateral {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: #232526;
+  color: #fff;
+  padding-top: 40px;
+  z-index: 10;
+  box-shadow: 2px 0 12px #0006;
+  border-right: 1.5px solid #232a52;
+}
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-lateral li {
+  margin-bottom: 32px;
+}
+.menu-lateral a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.07em;
+  padding: 10px 22px;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+.menu-lateral a:hover, .menu-lateral a:focus, .menu-lateral a.ativo {
+  background: #42aaff33;
+  color: #42aaff;
+}
+
+/* Suavidade ao rolar para as seções */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Botão padrão */
+button {
+  background: #42aaff;
+  color: #18191a;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 32px;
+  font-size: 1.08em;
+  font-weight: 500;
+  box-shadow: 0 2px 10px #0003;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 15px;
+}
+button:hover, button:focus {
+  background: #43a047;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Animação para ícones do Font Awesome */
+.fab:hover, .fas:hover {
+  transform: scale(1.2) rotate(-10deg);
+  transition: transform 0.3s;
+}
+
+.quemsou-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.foto-quemsou {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #0008;
+  border: 3px solid #42aaff;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.foto-quemsou:hover {
+  transform: scale(3.2);
+  z-index: 999;
+  box-shadow: 0 8px 32px #000b;
+  filter: drop-shadow(1px 4px 12px rgba(14, 0, 143, 0.533));
+}
+
+.texto-quemsou {
+  flex: 1;
+  min-width: 200px;
 }

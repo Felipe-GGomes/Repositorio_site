@@ -1,15 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu-Primeiro-Site</title>
+    <title>Felipe Gabriel Gomes - Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="JavaScript" href="script.js">
 </head>
+
 <body>
-    <h1>Meu Primeiro Site</title>
-    <button id="MeuBotao"> Clique para animar</button>
-    <div id="caixa"></div>
-    <script src="script.js"></script>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Felipe Gabriel Gomes</h1>
+        <p>
+            Desenvolvedor e Estudante de Análise e Desenvolvimento de Sistemas | UTFPR - Pato Branco, PR
+        </p>
+    </header>
+
+
+    <!-- Barra lateral -->
+    <nav class="menu-lateral">
+        <ul>
+            <li><a href="#Sobre">Sobre mim</a></li>
+            <li><a href="#quem">Quem sou eu</a></li>
+            <li><a href="#linguagens">Linguagens</a></li>
+            <li><a href="#Interesses">Interesses</a></li>
+            <li><a href="#Projetos">Projetos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Seções -->
+        <section id="Sobre">
+            <h2>Sobre mim</h2>
+            <hr class="linha-branca">
+            <ul class="topicos">
+                <li>Graduando em Análise e Desenvolvimento de Sistemas pela Universidade Tecnológica Federal do Paraná
+                    (UTFPR).</li>
+                <li>Entusiasta da tecnologia, com experiência em diversas linguagens de programação e foco em
+                    desenvolvimento de software.</li>
+                <li>Atuação profissional como Suporte Técnico na SAG Software Agroindustriais, com vivência em ambientes
+                    corporativos e soluções voltadas ao setor agroindustrial.</li>
+                <li>Valorizo o aprendizado contínuo e utilizo Inteligência Artificial como ferramenta para aprimorar
+                    estudos e projetos.</li>
+            </ul>
+        </section>
+
+        <section id="quem">
+            <h2>Quem sou eu</h2>
+            <hr class="linha-branca">
+            <img src="fotos/eucarro.jpg" alt="Felipe Gabriel Gomes" class="foto-quemsou">
+            <div class="quemsou-container">
+                <div class="texto-quemsou">
+                    <p>
+                        Olá! Sou Felipe Gabriel Gomes, estudante de Análise e Desenvolvimento de Sistemas na
+                        UTFPR.<br><br>
+                        Sempre fui curioso em entender como as coisas funcionam. Desde pequeno, desmontava objetos para
+                        descobrir como eram feitos, e essa curiosidade se transformou em paixão pela tecnologia e pelo
+                        aprendizado constante.<br><br>
+                        Fora da universidade, busco me envolver em projetos práticos, explorar novas ferramentas e
+                        compartilhar conhecimento com outras pessoas.<br><br>
+                        Já ministrei oficinas de Python para iniciantes em minha cidade e atuei como instrutor em cursos
+                        de Git e GitHub para colegas da faculdade — experiências que reforçaram meu gosto por ensinar e
+                        colaborar.<br><br>
+                        Atualmente, integro a equipe da SAG Software Agroindustriais, aplicando meus conhecimentos em
+                        projetos reais e fortalecendo minha base técnica e profissional.<br><br>
+                        <strong>Obs:</strong> A foto com meu carro representa minha paixão por automóveis e pela ideia
+                        de estar sempre em movimento — evoluindo e explorando novos caminhos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="linguagens">
+            <h2>Linguagens</h2>
+            <hr class="linha-branca">
+            <i class="fab fa-python" style="color: #3776ab;" title="Python (Favorito)"></i>
+            <i class="fas fa-database" style="color: #666;" title="SQL (Entusiasta)"></i>
+            <i class="fab fa-html5" style="color: #e34c26;" title="HTML5 (Aprendendo)"></i>
+            <i class="fab fa-css3-alt" style="color: #2965f1;" title="CSS3 (Aprendendo)"></i>
+            <i class="fab fa-js" style="color: #f0db4f;" title="JavaScript (Aprendendo)"></i>
+            <i class="fab fa-java" style="color: #f89820;" title="Java (Básico)"></i>
+            <i class="fab fa-c" style="color: #ffffff;" title="C (Intermediário)"></i>
+            <p>
+                Estas são algumas das linguagens que venho aprendendo e aplicando em meus projetos. Cada uma representa
+                novos desafios e oportunidades, e busco constantemente evoluir para desenvolver soluções cada vez mais
+                eficientes e inovadoras.
+            </p>
+        </section>
+
+        <section id="Interesses">
+            <h2>Interesses</h2>
+            <hr class="linha-branca">
+            <p>Áreas da tecnologia que mais despertam meu interesse e nas quais pretendo me especializar.</p>
+            <ul class="topicos">
+                <li>Desenvolvimento no geral</li>
+                <li>Inteligência Artificial</li>
+                <li>Bancos de Dados</li>
+                <li>Tecnologias Emergentes</li>
+            </ul>
+        </section>
+
+        <section id="Projetos">
+            <h2>Projetos</h2>
+            <hr class="linha-branca">
+            <ul class="topicos">
+                <li><strong>Site Pessoal:</strong> projeto desenvolvido para praticar HTML, CSS e JavaScript, servindo
+                    como meu portfólio profissional.</li>
+                <li><strong>Projeto Seletivo – OCCAN Engenharias:</strong> participei de um desafio em equipe para
+                    desenvolver um site front-end, aplicando metodologias ágeis, prototipagem e reuniões semanais.</li>
+                <li><strong>Aulas de Python:</strong> ministrei oficinas gratuitas para iniciantes, abordando lógica de
+                    programação e fundamentos da linguagem.</li>
+                <li><strong>Curso de Git e GitHub:</strong> atuei como instrutor, auxiliando colegas da faculdade na
+                    compreensão de fluxos de versionamento e colaboração.</li>
+                <li><strong>Experiência Profissional – SAG Software Agroindustriais:</strong> aplico conhecimentos em
+                    projetos voltados ao setor agroindustrial, com foco em eficiência e inovação.</li>
+                <li><strong>Iniciação Científica – UTFPR:</strong> pesquisa atual sobre o uso da biblioteca NLTK em
+                    aplicações de Engenharia de Software, com foco em Processamento de Linguagem Natural.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <h3>Contato</h3>
+        <ul>
+            <li>Email: <a href="mailto:felipeggomes80@gmail.com">felipeggomes80@gmail.com</a></li>
+            <li>LinkedIn: <a
+                    href="https://www.linkedin.com/in/felipe-gabriel-gomes-9194b7283/?trk=opento_sprofile_topcard"
+                    target="_blank">Felipe Gabriel Gomes</a></li>
+            <li>GitHub: <a href="https://github.com/Felipe-GGomes" target="_blank">Felipe-GGomes</a></li>
+        </ul>
+    </footer>
 </body>
+
 </html>
