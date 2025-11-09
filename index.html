@@ -106,10 +106,10 @@
                 <h2>Interesses</h2>
                 <p>Áreas da tecnologia que mais despertam meu interesse e nas quais pretendo me especializar.</p>
                 <ul class="topicos">
-                    <li>Desenvolvimento no geral</li>
-                    <li>Inteligência Artificial</li>
-                    <li>Bancos de Dados</li>
-                    <li>Tecnologias Emergentes</li>
+                    <li><i class="fas fa-code"></i> Desenvolvimento no geral</li>
+                    <li><i class="fas fa-brain"></i> Inteligência Artificial</li>
+                    <li><i class="fas fa-database"></i> Bancos de Dados</li>
+                    <li><i class="fas fa-microchip"></i> Tecnologias Emergentes</li>
                 </ul>
             </section>
 
@@ -152,12 +152,42 @@
     </footer>
 
     <script>
-        const btn = document.getElementById('menu-toggle');
-        const menu = document.querySelector('.menu-lateral');
-        btn.onclick = function () {
-            menu.classList.toggle('aberta');
-        };
-    </script>
+    const btn = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu-lateral');
+    const sections = document.querySelectorAll('main section');
+    const navLinks = document.querySelectorAll('.menu-lateral a');
+
+    // Função para abrir/fechar menu mobile
+    btn.onclick = function () {
+        menu.classList.toggle('aberta');
+        document.body.classList.toggle('menu-aberto'); // Adiciona classe ao body
+    };
+
+    // Função para destacar o link ativo na navegação
+    window.addEventListener('scroll', () => {
+        let current = '';
+
+        sections.forEach(section => {
+            // Calcula o ponto de rolagem para definir a seção ativa
+            const sectionTop = section.offsetTop - 100; // Offset de 100px para melhorar a detecção
+            if (scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('ativo');
+            if (link.href.includes(current)) {
+                link.classList.add('ativo');
+            }
+        });
+    });
+
+    // Garante que o primeiro link esteja ativo ao carregar a página
+    if (navLinks.length > 0) {
+        navLinks[0].classList.add('ativo');
+    }
+</script>
 </body>
 
 </html>
