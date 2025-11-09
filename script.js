@@ -4,8 +4,4 @@ const foto = document.querySelector('.foto-quemsou');
 foto.addEventListener('click', function() {
   foto.classList.toggle('ampliada')
 });
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> dafd75
