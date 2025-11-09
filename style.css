@@ -4,27 +4,29 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: min(4vw, 18px);
-  scroll-behavior: smooth;
+    font-size: min(4vw, 18px);
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: #e0e0e0;
-  background: linear-gradient(90deg, #181a1b, #1d1f21);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e0e0e0;
+    /* Aplicando o gradiente de fundo diretamente */
+    background: linear-gradient(90deg, #181a1b, #1d1f21);
+}
 
-  /* =========================================================
-  MENU LATERAL FIXO (desktop)
+/* =========================================================
+   MENU LATERAL FIXO (desktop)
    ========================================================= */
-  .menu-lateral {
+.menu-lateral {
     position: fixed;
     top: 0;
     left: 0;
@@ -38,19 +40,19 @@ body {
     z-index: 10;
     white-space: nowrap;
     transition: transform 0.3s;
-  }
+}
 
-  .menu-lateral ul {
+.menu-lateral ul {
     list-style: none;
     margin: 0;
     padding: 0 1em;
-  }
+}
 
-  .menu-lateral li {
+.menu-lateral li {
     margin-bottom: 20px;
-  }
+}
 
-  .menu-lateral a {
+.menu-lateral a {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -58,19 +60,19 @@ body {
     padding: 10px 22px;
     border-radius: 8px;
     transition: background 0.3s, color 0.3s;
-  }
+}
 
-  .menu-lateral a:hover,
-  .menu-lateral a:focus,
-  .menu-lateral a.ativo {
+.menu-lateral a:hover,
+.menu-lateral a:focus,
+.menu-lateral a.ativo {
     background: #42aaff33;
     color: #5ab4ff;
-  }
+}
 
-  /* =========================================================
+/* =========================================================
    BOTÃO HAMBÚRGUER (mobile/tablet)
    ========================================================= */
-  .menu-toggle-btn {
+.menu-toggle-btn {
     display: none;
     position: fixed;
     top: -3px;
@@ -84,12 +86,12 @@ body {
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 0 2px 8px #0006;
-  }
+}
 
-  /* =========================================================
-   FUNDO DECORATIVO CENTRAL
+/* =========================================================
+   FUNDO DECORATIVO CENTRAL (Manter, se necessário, mas está desativado pelo `opacity: 0.5` e `pointer-events: none`)
    ========================================================= */
-  .main-bg {
+.main-bg {
     position: fixed;
     top: 0;
     left: 50%;
@@ -99,77 +101,70 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #181a1b 80%, #232526 100%);
     opacity: 0.5;
-    border-radius: 18px;
     pointer-events: none;
     z-index: 0;
-  }
+    border-radius: 18px; /* Adicionado para evitar erro de sintaxe do `body` aninhado */
+}
 
-  /* =========================================================
+/* =========================================================
    LAYOUT GERAL
    ========================================================= */
-  .layout {
+.layout {
     position: relative;
-    width: 100vw;
+    width: 100%; /* Usar 100% em vez de 100vw para melhor manuseio de scroll */
     z-index: 1;
-  }
+}
 
-  /* =========================================================
+/* =========================================================
    CABEÇALHO
    ========================================================= */
-  header {
+header {
     background: #181a1b;
     color: #fff;
     text-align: center;
     padding: 30px 0 10px;
     box-shadow: 0 2px 12px #0004;
-  }
+}
 
-  /* =========================================================
-  CONTEÚDO PRINCIPAL
+/* =========================================================
+   CONTEÚDO PRINCIPAL (MAIN)
    ========================================================= */
-  main {
+main {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background: none;
     margin: 0 auto;
     padding: 0;
     z-index: 1;
-  }
+}
 
-  /* Blocos de conteúdo */
-  section {
-    padding: 28px 22px;
+/* Blocos de conteúdo (Section) */
+section {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 90%; /* Ajuste para o mobile */
     max-width: 700px;
-    margin: 32px 0;
+    margin: 32px auto;
     padding: 24px;
     background: #1a2533;
     color: #fafcff;
     border-radius: 14px;
     box-shadow: 0 4px 24px #0006;
-  }
+}
 
-  /* Linha decorativa azul */
-  .linha-branca {
-    width: 60%;
-    height: 3px;
-    margin: 18px 0;
-    background: #42aaff;
-    border: none;
-    border-radius: 4px;
-  }
+/* REMOVIDO: Linha decorativa `.linha-branca` (feito no h2 abaixo) */
 
-  /* =========================================================
-  TÍTULOS E LISTAS
+
+/* =========================================================
+   TÍTULOS E LISTAS
    ========================================================= */
-  h2,
-  h3 {
+h2,
+h3 {
+    /* Mantendo o estilo visual de "tag" */
     display: inline-block;
     margin-bottom: 14px;
     padding: 8px 18px;
@@ -178,58 +173,78 @@ body {
     color: #fff;
     border-radius: 8px;
     background: linear-gradient(90deg, #33455b 60%, #18191a 100%);
-  }
+}
 
-  /* Lista de tópicos */
-  ul.topicos {
+/* Estilo que substitui o repetitivo HR */
+section h2 {
+    /* Desfazendo o inline-block para o border-bottom funcionar em toda a largura */
+    display: block;
+    width: 100%;
+    
+    /* Removendo padding horizontal para o border-bottom ficar limpo */
+    padding-left: 0;
+    padding-right: 0;
+    
+    /* Adicionando a linha decorativa */
+    border-bottom: 3px solid #42aaff;
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+    
+    /* Reaplicando o background do h2 */
+    background: none; 
+}
+
+
+/* Lista de tópicos */
+ul.topicos {
     margin-left: 24px;
     list-style-type: disc;
     color: #f5f5f7;
     font-size: 1em;
-  }
+}
 
-  ul.topicos li {
+ul.topicos li {
     margin-bottom: 12px;
     padding-left: 4px;
-  }
+}
 
-  /* =========================================================
+/* =========================================================
    RODAPÉ
    ========================================================= */
-  footer {
+footer {
     margin-top: 40px;
     padding: 15px 0;
     text-align: center;
     background: #181a1b;
     color: #e0e0e0;
     box-shadow: 0 -2px 12px #0005;
-  }
+}
 
-  footer ul {
+footer ul {
     list-style: none;
     padding: 0;
-  }
+}
 
-  footer ul li {
+footer ul li {
     margin: 8px 0;
-  }
+}
 
-  /* =========================================================
+/* =========================================================
    LINKS E BOTÕES
    ========================================================= */
-  a {
+a {
     color: #5ab4ff;
     text-decoration: none;
     transition: color 0.3s;
-  }
+}
 
-  a:hover {
+a:hover {
     color: #9eebff;
     text-decoration: underline;
-  }
+}
 
-  /* Botão padrão */
-  button {
+/* Botão padrão */
+button {
     background: #42aaff;
     color: #18191a;
     border: none;
@@ -240,26 +255,26 @@ body {
     box-shadow: 0 2px 10px #0003;
     margin-top: 15px;
     transition: background 0.2s, transform 0.2s;
-  }
+}
 
-  button:hover,
-  button:focus {
+button:hover,
+button:focus {
     background: #43a047;
     color: #fff;
     transform: scale(1.05);
-  }
+}
 
-  /* =========================================================
-   SEÇÃO "QUEM SOU"
+/* =========================================================
+   SEÇÃO "QUEM SOU" (OU #SOBRE)
    ========================================================= */
-  .quemsou-container {
+.perfil-completo { /* Adicionei este seletor no HTML refatorado */
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 24px;
     flex-wrap: wrap;
-  }
+}
 
-  .foto-quemsou {
+.foto-quemsou {
     width: 120px;
     height: 120px;
     object-fit: cover;
@@ -268,96 +283,65 @@ body {
     box-shadow: 0 2px 8px #0008;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
+}
 
-  .foto-quemsou:hover {
+.foto-quemsou:hover {
     transform: scale(1.4);
     box-shadow: 0 8px 32px #000b;
     filter: drop-shadow(1px 4px 12px rgba(14, 0, 143, 0.533));
     z-index: 999;
-  }
+}
 
-  .texto-quemsou {
+.texto-quemsou {
     flex: 1;
     min-width: 200px;
-  }
+}
 
-  /* =========================================================
+
+/* =========================================================
    RESPONSIVIDADE
    ========================================================= */
 
-  /* --- Mobile / Tablet --- */
-  @media (max-width: 800px) {
-    body {
-      padding-left: 0;
-    }
-
+/* --- Mobile / Tablet (< 800px) --- */
+@media (max-width: 800px) {
     .menu-lateral {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 220px;
-      height: 100vh;
-      transform: translateX(-100%);
-      white-space: normal;
-      padding-top: 120px;
-      z-index: 100;
+        transform: translateX(-100%);
+        padding-top: 120px;
+        z-index: 100;
     }
 
     .menu-lateral.aberta {
-      transform: translateX(0);
+        transform: translateX(0);
     }
 
     .menu-toggle-btn {
-      display: block;
+        display: block;
     }
 
     main {
-      display: block;
-      width: 100vw;
-      margin: 0 auto;
-      padding: 0 2vw;
+        padding: 0 2vw; 
+        width: 100%; 
+        margin: 0 auto;
     }
 
     section {
-      max-width: 96vw;
-      margin: 32px auto;
+        max-width: 96vw; /* Ajuste para preencher melhor a tela mobile */
     }
-  }
-
-  /* --- Desktop --- */
-  @media (min-width: 801px) {
-    .menu-lateral {
-      width: 220px;
-      height: 100vh;
-      left: 0;
-      top: 0;
-      box-shadow: 2px 0 12px #0006;
-    }
-
-    .menu-toggle-btn {
-      display: none;
-    }
-
+}
+@media (min-width: 801px) {
     .layout {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      width: 100vw;
+        display: flex;
+        justify-content: flex-start; 
+        align-items: flex-start;
+        width: 100%; 
+        min-height: 100vh;
     }
 
     main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100vw;
-      min-height: 100vh;
+        padding-left: 0; 
+        flex-grow: 1; 
+        margin-left: auto; 
+        margin-right: auto;
+        max-width: calc(100% - 220px); /* 100% da área disponível menos a largura do menu */
     }
-
-    section {
-      max-width: 700px;
-      width: 100%;
-      margin: 32px 0;
-    }
-  }
 }
