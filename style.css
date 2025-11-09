@@ -296,7 +296,28 @@ button:focus {
     flex: 1;
     min-width: 200px;
 }
+/* =========================================================
+   SEÇÃO LINGUAGENS E ÍCONES (peguei na internet achei mt legal)
+   ========================================================= */
 
+/* Estilo para todos os ícones de Linguagens na seção #linguagens */
+#linguagens i {
+    /* Garante que a transição seja suave */
+    transition: transform 0.3s ease-out; 
+    
+    /* Adicione outros estilos, como tamanho da fonte e margem, se necessário */
+    font-size: 3em; 
+    margin: 0 10px 20px 10px;
+}
+
+/* Efeito ao passar o mouse */
+#linguagens i:hover {
+    /* Move o ícone levemente para a direita (X) e para cima (Y) */
+    transform: translateX(5px) translateY(-5px) scale(1.1); 
+    
+    /* Opcional: Efeito de sombra ou brilho */
+    filter: drop-shadow(0 0 8px rgba(90, 180, 255, 0.7));
+}
 
 /* =========================================================
    RESPONSIVIDADE
